@@ -19,17 +19,16 @@
 # immutable_var[0] [0] = "nigga"
 # print(immutable_var)
 # mutable_list = ["Benedict", 33, "aboba", 8.8005553535]
-# mutable_list.append('it aint my fault she call me all the time when been on the grind')
+# mutable_list.append('it ain't my fault she calls me all the time when been on the grind')
 # print(mutable_list)
 
 # phone_book = {'George': 8800553535, 'Steve': 500}
 # phone_book.update({'ALex:': 1488,
-#                    'Bizy': 8888})
+#                    'Biz': 8888})
 # print(phone_book.keys(), phone_book.values(), phone_book.items(), phone_book.get('Steve'))
-# getnumber = phone_book.pop('George')
+# get_number = phone_book.pop('George')
 # print(phone_book)
-# print(getnumber)
-
+# print(get_number)
 # numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9}
 # print(numbers) #You can't call them from ID or something
 
@@ -51,3 +50,17 @@
 
 # a = 1+2j
 # print(a, "is complex number?", isinstance(1+2j, complex))
+
+# grades = [[5, 3, 3, 5, 4], [2, 2, 2, 3], [4, 5, 5, 2], [4, 4, 3], [5, 5, 5, 4, 5]]
+# students = {'Johnny', 'Bilbo', 'Steve', 'Nigga', 'Aaron'}
+# students = sorted(students)
+# average_grade = {}#
+# for i in range(len(grades)):
+# 	average_grade[students[i]] = sum(grades[i]) / len(grades[i])
+# print(average_grade)
+
+# if (name := input("Enter your name: ").lower()) in [n.lower() for n in ["womp-womp", "aboba", "huevo"]]:
+# 	print(f"Hello {name}!")
+# else:
+# 	print(f"I don't know you {name}!")
+
