@@ -64,3 +64,22 @@
 # else:
 # 	print(f"I don't know you {name}!")
 
+# number = int(input("Enter a number: "))
+# if number % 3 == 0 and number % 5 == 0:
+# 	print('FizzBuzz')
+# elif number % 5 == 0:
+# 	print('Buzz')
+# elif number % 3 == 0:
+# 	print('Fizz')
+# else: print(f"The number {number} is either not Fizz or Buzz or FizzBuzz.")
+
+first = int(input("Enter first number: "))
+second = int(input("Enter second number: "))
+third = int(input("Enter third number: "))
+
+if first == second == third:
+	print(f"All numbers are same!\n{first}, {second}, {third}")
+elif first != second and second != third and third != first:
+	print(f"Womp-Womp there is no same numbers!\n{first}, {second}, {third}")
+elif first == second or first == third or third == second:
+	print(f"Only two numbers are same!\n{first}, {second}, {third}")
