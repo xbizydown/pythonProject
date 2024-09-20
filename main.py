@@ -73,13 +73,61 @@
 # 	print('Fizz')
 # else: print(f"The number {number} is either not Fizz or Buzz or FizzBuzz.")
 
-first = int(input("Enter first number: "))
-second = int(input("Enter second number: "))
-third = int(input("Enter third number: "))
+# first = int(input("Enter first number: "))
+# second = int(input("Enter second number: "))
+# third = int(input("Enter third number: "))
+#
+# if first == second == third:
+# 	print(f"All numbers are same!\n{first}, {second}, {third}")
+# elif first != second and second != third and third != first:
+# 	print(f"Womp-Womp there is no same numbers!\n{first}, {second}, {third}")
+# elif first == second or first == third or third == second:
+# 	print(f"Only two numbers are same!\n{first}, {second}, {third}")
 
-if first == second == third:
-	print(f"All numbers are same!\n{first}, {second}, {third}")
-elif first != second and second != third and third != first:
-	print(f"Womp-Womp there is no same numbers!\n{first}, {second}, {third}")
-elif first == second or first == third or third == second:
-	print(f"Only two numbers are same!\n{first}, {second}, {third}")
+# while 1 > 0:
+# 	number = int(input("Enter a number: "))
+# 	if 2 != 0:
+# 		print(number, "is an odd number.")
+# 		break
+# 	else:
+# 		print(number, "is an even number.")
+# 		continue
+
+
+# my_list = [42, 69, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
+# my_list_index = 0
+# while my_list_index < len(my_list):
+# 	if my_list[my_list_index] in [42, 69, 322, 13, 99]:
+# 		print(my_list[my_list_index])
+# 	my_list_index += 1
+
+
+# my_list = [42, 69, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
+# i = 0
+# while i <= len(my_list):
+#     if my_list[i] < 0:
+#         break
+#     elif my_list[i] > 0:
+#         print(my_list[i])
+#     i += 1
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+primes = []
+not_primes = []
+for number in numbers:
+	if number == 1:
+		continue
+
+	is_prime = True
+	for i in range(2, number):
+		if number % i == 0:
+			is_prime = False
+			break
+
+	if is_prime:
+		primes.append(number)
+	else:
+		not_primes.append(number)
+
+print(f"Primes: {primes}")
+print(f"Not Primes: {not_primes}")
