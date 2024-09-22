@@ -111,23 +111,68 @@
 #         print(my_list[i])
 #     i += 1
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-primes = []
-not_primes = []
-for number in numbers:
-	if number == 1:
-		continue
+# def display_invoice(username, amount, due_date):
+# 	print(f"Hello {username}!")
+# 	print(f"Your bill of ${amount:.2f} is {due_date}")
+#
+# display_invoice("xBizyDown", 42.50, "01/01")
 
-	is_prime = True
-	for i in range(2, number):
-		if number % i == 0:
-			is_prime = False
-			break
+# def add(x, y):
+# 	z = x + y
+# 	return z
+#
+# def subtract(x, y):
+# 	return x - y
+#
+# def multiply(x, y):
+# 	return x * y
+#
+# def divide(x, y):
+# 	return x / y
+#
+# print(add(1, 2))
+# print(subtract(1, 2))
+# print(multiply(1, 2))
+# print(divide(2, 2))
+#
+# number = 3.14159
+# integer = 42
+# string = "Hello"
+#
+# print("{:.2f}".format(number))  # 3.14
+# print("{:d}".format(integer))    # 42
+# print("{:.2e}".format(number))    # 3.14e+00
+# print("{:s}".format(string))      # Hello
+# print("{:.2%}".format(0.1234))   # 12.34%
+# print("{:<10}".format(string))    # Hello
+# print("{:>10}".format(string))    #      Hello
+# print("{:^10}".format(string))     #   Hello
+# print("{:05d}".format(integer))    # 00042
 
-	if is_prime:
-		primes.append(number)
-	else:
-		not_primes.append(number)
+# def create_name(first, last):
+# 	first = first.capitalize()
+# 	last = last.capitalize()
+# 	return first, last
+#
+# full_name = input(f"Type your First and Last name: ")
+# first_name, last_name = full_name.split()
+# formatted_name = create_name(first_name, last_name)
+#
+# print(f"Hello! {formatted_name}")
 
-print(f"Primes: {primes}")
-print(f"Not Primes: {not_primes}")
+def get_matrix(n, m, value):
+	matrix = []
+	for i in range(n):
+		n = []
+		for j in range(m):
+			n.append(value)
+		matrix.append(n)
+	return matrix
+
+result1 = get_matrix(2, 2, 10)
+result2 = get_matrix(3, 5, 42)
+result3 = get_matrix(4, 2, 13)
+
+print(result1)
+print(result2)
+print(result3)
