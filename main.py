@@ -6,7 +6,7 @@
 # print(f"Age: {age}")
 # is_student = True
 # print(f"Is Student: {is_student}")
-
+#
 # my_string = input("Enter a string: ")
 # print(f"Amount of Symbols:", str(len(my_string)))
 # print(my_string.upper())
@@ -14,14 +14,14 @@
 # print(my_string.replace(" ", ""))
 # print(my_string[0])
 # print(my_string[-1])
-
+#
 # immutable_var = (["Benedict", 33, "aboba", 8.8005553535], 123, 4444)
 # immutable_var[0] [0] = "nigga"
 # print(immutable_var)
 # mutable_list = ["Benedict", 33, "aboba", 8.8005553535]
 # mutable_list.append('it ain't my fault she calls me all the time when been on the grind')
 # print(mutable_list)
-
+#
 # phone_book = {'George': 8800553535, 'Steve': 500}
 # phone_book.update({'ALex:': 1488,
 #                    'Biz': 8888})
@@ -31,7 +31,7 @@
 # print(get_number)
 # numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9}
 # print(numbers) #You can't call them from ID or something
-
+#
 # my_dict = {'Vasya': 1975, 'Egor': 1999, 'Masha': 2002}
 # print("Dict:", my_dict)
 # print("Existing value:", my_dict.get('Masha'))
@@ -47,10 +47,10 @@
 # my_elements = [13, (5, 6, 1.6)]
 # my_set.update(my_elements)
 # print("Modified set:", my_set)
-
+#
 # a = 1+2j
 # print(a, "is complex number?", isinstance(1+2j, complex))
-
+#
 # grades = [[5, 3, 3, 5, 4], [2, 2, 2, 3], [4, 5, 5, 2], [4, 4, 3], [5, 5, 5, 4, 5]]
 # students = {'Johnny', 'Bilbo', 'Steve', 'Nigga', 'Aaron'}
 # students = sorted(students)
@@ -58,12 +58,12 @@
 # for i in range(len(grades)):
 # 	average_grade[students[i]] = sum(grades[i]) / len(grades[i])
 # print(average_grade)
-
+#
 # if (name := input("Enter your name: ").lower()) in [n.lower() for n in ["womp-womp", "aboba", "huevo"]]:
 # 	print(f"Hello {name}!")
 # else:
 # 	print(f"I don't know you {name}!")
-
+#
 # number = int(input("Enter a number: "))
 # if number % 3 == 0 and number % 5 == 0:
 # 	print('FizzBuzz')
@@ -72,7 +72,7 @@
 # elif number % 3 == 0:
 # 	print('Fizz')
 # else: print(f"The number {number} is either not Fizz or Buzz or FizzBuzz.")
-
+#
 # first = int(input("Enter first number: "))
 # second = int(input("Enter second number: "))
 # third = int(input("Enter third number: "))
@@ -83,7 +83,7 @@
 # 	print(f"Womp-Womp there is no same numbers!\n{first}, {second}, {third}")
 # elif first == second or first == third or third == second:
 # 	print(f"Only two numbers are same!\n{first}, {second}, {third}")
-
+#
 # while 1 > 0:
 # 	number = int(input("Enter a number: "))
 # 	if 2 != 0:
@@ -92,16 +92,16 @@
 # 	else:
 # 		print(number, "is an even number.")
 # 		continue
-
-
+#
+#
 # my_list = [42, 69, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
 # my_list_index = 0
 # while my_list_index < len(my_list):
 # 	if my_list[my_list_index] in [42, 69, 322, 13, 99]:
 # 		print(my_list[my_list_index])
 # 	my_list_index += 1
-
-
+#
+#
 # my_list = [42, 69, 322, 13, 0, 99, -5, 9, 8, 7, -6, 5]
 # i = 0
 # while i <= len(my_list):
@@ -110,13 +110,13 @@
 #     elif my_list[i] > 0:
 #         print(my_list[i])
 #     i += 1
-
+#
 # def display_invoice(username, amount, due_date):
 # 	print(f"Hello {username}!")
 # 	print(f"Your bill of ${amount:.2f} is {due_date}")
 #
 # display_invoice("xBizyDown", 42.50, "01/01")
-
+#
 # def add(x, y):
 # 	z = x + y
 # 	return z
@@ -148,7 +148,7 @@
 # print("{:>10}".format(string))    #      Hello
 # print("{:^10}".format(string))     #   Hello
 # print("{:05d}".format(integer))    # 00042
-
+#
 # def create_name(first, last):
 # 	first = first.capitalize()
 # 	last = last.capitalize()
@@ -159,20 +159,51 @@
 # formatted_name = create_name(first_name, last_name)
 #
 # print(f"Hello! {formatted_name}")
+#
+# def get_matrix(n, m, value):
+# 	matrix = []
+# 	for i in range(n):
+# 		n = []
+# 		for j in range(m):
+# 			n.append(value)
+# 		matrix.append(n)
+# 	return matrix
+#
+# result1 = get_matrix(2, 2, 10)
+# result2 = get_matrix(3, 5, 42)
+# result3 = get_matrix(4, 2, 13)
+#
+# print(result1)
+# print(result2)
+# print(result3)
+#
+# #1st program
+# print(9 ** 0.5)
+#
+# #2nd program
+# print(9.99 > 9.98 and 1000 != 1000.1)
+#
+# #3rd program
+# result1 = 2 * 2 +2
+# result2 = 2 * (2 + 2)
+# comparison = result1 == result2
+# print(f"{result1}\n{result2}\n{comparison}")
+#
+# #4th program
+# float_number = "123.456"
+# print(type(float(float_number)), float_number)
+# float_number = float(float_number)
+# float_shift = float_number * 10
+# print(float_shift)
 
-def get_matrix(n, m, value):
-	matrix = []
-	for i in range(n):
-		n = []
-		for j in range(m):
-			n.append(value)
-		matrix.append(n)
-	return matrix
-
-result1 = get_matrix(2, 2, 10)
-result2 = get_matrix(3, 5, 42)
-result3 = get_matrix(4, 2, 13)
-
-print(result1)
-print(result2)
-print(result3)
+number = int(input("Enter a number from 3 to 20: "))
+password = ""
+for i in range(1, 21):
+	for j in range(i + 1, 21):
+		if i != j and i != number and j != number:
+			sum_pair = i + j
+			if number % sum_pair == 0:
+				number_pair = f"{i}{j}"
+				password += number_pair
+				break
+print(password)
