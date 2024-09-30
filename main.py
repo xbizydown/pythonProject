@@ -196,14 +196,41 @@
 # float_shift = float_number * 10
 # print(float_shift)
 
-number = int(input("Enter a number from 3 to 20: "))
-password = ""
-for i in range(1, 21):
-	for j in range(i + 1, 21):
-		if i != j and i != number and j != number:
-			sum_pair = i + j
-			if number % sum_pair == 0:
-				number_pair = f"{i}{j}"
-				password += number_pair
-				break
-print(password)
+# number = int(input("Enter a number from 3 to 20: "))
+# password = ""
+# for i in range(1, 21):
+# 	for j in range(i + 1, 21):
+# 		if i != j and i != number and j != number:
+# 			sum_pair = i + j
+# 			if number % sum_pair == 0:
+# 				number_pair = f"{i}{j}"
+# 				password += number_pair
+# 				break
+# print(password)
+
+calls = 0
+def count_calls():
+	global calls
+	calls += 1
+	return
+
+def string_info(string):
+	count_calls()
+	length = len(string)
+	upper_string = string.upper()
+	lower_string = string.lower()
+	return (length, upper_string, lower_string)
+
+def is_contains(string, list_of_strings):
+	count_calls()
+	lower_string = string.lower()
+	for item in list_of_strings:
+		if lower_string == item.lower():
+			return True
+	return False
+
+print(string_info('Capybara'))
+print(string_info('Armageddon'))
+print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
+print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches
+print(calls)
