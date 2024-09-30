@@ -208,29 +208,64 @@
 # 				break
 # print(password)
 
-calls = 0
-def count_calls():
-	global calls
-	calls += 1
-	return
+# calls = 0
+# def count_calls():
+# 	global calls
+# 	calls += 1
+# 	return
+#
+# def string_info(string):
+# 	count_calls()
+# 	length = len(string)
+# 	upper_string = string.upper()
+# 	lower_string = string.lower()
+# 	return length, upper_string, lower_string
+#
+# def is_contains(string, list_of_strings):
+# 	count_calls()
+# 	lower_string = string.lower()
+# 	for item in list_of_strings:
+# 		if lower_string == item.lower():
+# 			return True
+# 	return False
+#
+# print(string_info('Capybara'))
+# print(string_info('Armageddon'))
+# print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
+# print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches
+# print(calls)
 
-def string_info(string):
-	count_calls()
-	length = len(string)
-	upper_string = string.upper()
-	lower_string = string.lower()
-	return (length, upper_string, lower_string)
+# def func_with_params(a, b=2, c=None):
+#     if c is None:
+#         c = []
+#         c.append(a)
+#     print(c)
+#
+#
+#
+# func_with_params(3)
+# func_with_params(4)
+# func_with_params(5)
+# func_with_params(6)
 
-def is_contains(string, list_of_strings):
-	count_calls()
-	lower_string = string.lower()
-	for item in list_of_strings:
-		if lower_string == item.lower():
-			return True
-	return False
+domain = (".net", ".ru", ".com")
+at = "@"
+def send_email(message, recipient, *, sender = "university.help@gmail.com"):
 
-print(string_info('Capybara'))
-print(string_info('Armageddon'))
-print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
-print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches
-print(calls)
+	if (at not in recipient or not recipient.endswith(domain)) or (at not in sender or not sender.endswith(domain)):
+		print(f"Alert!\nE-mail address should contain @ or .net/.ru/.com or .com.!\n")
+
+	elif sender == recipient:
+		print(f"Alert!\nYou can't send messages from {sender} to {recipient}!\n")
+
+	elif sender == "university.help@gmail.com":
+		print(f"Success!\nYour message has been successfully sent! From {sender} to {recipient}!\n")
+
+	elif sender != "university.help@gmail.com":
+		print(f"Alert!\nNON-STANDART SENDER! Your message has been sent from {sender} to {recipient}!\n")
+
+send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
+send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
+send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
+send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
+
