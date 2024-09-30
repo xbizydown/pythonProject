@@ -269,18 +269,31 @@
 # send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
 # send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
 
-def print_params(a = 1, b = "string", c = True):
-	print(a, b, c)
+# def print_params(a = 1, b = "string", c = True):
+# 	print(a, b, c)
+#
+# print_params()
+# print_params(10)
+# print_params(b = 25)
+# print_params(c = [1, 2, 3])
+#
+# values_list = ["bumboclaat", 8888.88, False]
+# values_list2 = [True, "False"]
+# values_dict = {"a": 999, "b": 12.21, "c": "oaoaoa"}
+#
+# print_params(*values_list)
+# print_params(*values_list2, 42)
+# print_params(**values_dict)
 
-print_params()
-print_params(10)
-print_params(b = 25)
-print_params(c = [1, 2, 3])
+def single_root_words(root_word, *others):
+	same_words = []
+	root_word = root_word.lower()
+	for other in others:
+		if root_word in other.lower() or other.lower() in root_word.lower():
+			same_words.append(other)
+	return same_words
 
-values_list = ["bumboclaat", 8888.88, False]
-values_list2 = [True, "False"]
-values_dict = {"a": 999, "b": 12.21, "c": "oaoaoa"}
-
-print_params(*values_list)
-print_params(*values_list2, 42)
-print_params(**values_dict)
+result1 = single_root_words('rich', 'richiest', 'orichalcum', 'cheers', 'richies')
+result2 = single_root_words('Disablement', 'Able', 'Mable', 'Disable', 'Bagel')
+print(result1)
+print(result2)
