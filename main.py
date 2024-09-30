@@ -248,24 +248,39 @@
 # func_with_params(5)
 # func_with_params(6)
 
-domain = (".net", ".ru", ".com")
-at = "@"
-def send_email(message, recipient, *, sender = "university.help@gmail.com"):
+# domain = (".net", ".ru", ".com")
+# at = "@"
+# def send_email(message, recipient, *, sender = "university.help@gmail.com"):
+#
+# 	if (at not in recipient or not recipient.endswith(domain)) or (at not in sender or not sender.endswith(domain)):
+# 		print(f"Alert!\nE-mail address should contain @ or .net/.ru/.com or .com.!\n")
+#
+# 	elif sender == recipient:
+# 		print(f"Alert!\nYou can't send messages from {sender} to {recipient}!\n")
+#
+# 	elif sender == "university.help@gmail.com":
+# 		print(f"Success!\nYour message has been successfully sent! From {sender} to {recipient}!\n")
+#
+# 	elif sender != "university.help@gmail.com":
+# 		print(f"Alert!\nNON-STANDART SENDER! Your message has been sent from {sender} to {recipient}!\n")
+#
+# send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
+# send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
+# send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
+# send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
 
-	if (at not in recipient or not recipient.endswith(domain)) or (at not in sender or not sender.endswith(domain)):
-		print(f"Alert!\nE-mail address should contain @ or .net/.ru/.com or .com.!\n")
+def print_params(a = 1, b = "string", c = True):
+	print(a, b, c)
 
-	elif sender == recipient:
-		print(f"Alert!\nYou can't send messages from {sender} to {recipient}!\n")
+print_params()
+print_params(10)
+print_params(b = 25)
+print_params(c = [1, 2, 3])
 
-	elif sender == "university.help@gmail.com":
-		print(f"Success!\nYour message has been successfully sent! From {sender} to {recipient}!\n")
+values_list = ["bumboclaat", 8888.88, False]
+values_list2 = [True, "False"]
+values_dict = {"a": 999, "b": 12.21, "c": "oaoaoa"}
 
-	elif sender != "university.help@gmail.com":
-		print(f"Alert!\nNON-STANDART SENDER! Your message has been sent from {sender} to {recipient}!\n")
-
-send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
-send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
-send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
-send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
-
+print_params(*values_list)
+print_params(*values_list2, 42)
+print_params(**values_dict)
