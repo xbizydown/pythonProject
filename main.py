@@ -195,6 +195,8 @@
 # float_number = float(float_number)
 # float_shift = float_number * 10
 # print(float_shift)
+from calendar import firstweekday
+
 
 # number = int(input("Enter a number from 3 to 20: "))
 # password = ""
@@ -285,15 +287,27 @@
 # print_params(*values_list2, 42)
 # print_params(**values_dict)
 
-def single_root_words(root_word, *others):
-	same_words = []
-	root_word = root_word.lower()
-	for other in others:
-		if root_word in other.lower() or other.lower() in root_word.lower():
-			same_words.append(other)
-	return same_words
+# def single_root_words(root_word, *others):
+# 	same_words = []
+# 	root_word = root_word.lower()
+# 	for other in others:
+# 		if root_word in other.lower() or other.lower() in root_word.lower():
+# 			same_words.append(other)
+# 	return same_words
+#
+# result1 = single_root_words('rich', 'richiest', 'orichalcum', 'cheers', 'richies')
+# result2 = single_root_words('Disablement', 'Able', 'Mable', 'Disable', 'Bagel')
+# print(result1)
+# print(result2)
 
-result1 = single_root_words('rich', 'richiest', 'orichalcum', 'cheers', 'richies')
-result2 = single_root_words('Disablement', 'Able', 'Mable', 'Disable', 'Bagel')
-print(result1)
-print(result2)
+def get_multiplied_digits(number):
+	str_number = str(number)
+	first = str_number[0]
+	first = int(first)
+	if len(str_number) <= 1:
+		return int(first)
+	else:
+		return first * get_multiplied_digits(int(str_number[1:]))
+
+
+print(get_multiplied_digits(40203))
