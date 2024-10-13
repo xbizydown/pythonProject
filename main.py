@@ -196,6 +196,7 @@
 # float_shift = float_number * 10
 # print(float_shift)
 from calendar import firstweekday
+from random import random
 
 
 # number = int(input("Enter a number from 3 to 20: "))
@@ -300,14 +301,44 @@ from calendar import firstweekday
 # print(result1)
 # print(result2)
 
-def get_multiplied_digits(number):
-	str_number = str(number)
-	first = str_number[0]
-	first = int(first)
-	if len(str_number) <= 1:
-		return int(first)
-	else:
-		return first * get_multiplied_digits(int(str_number[1:]))
+# def get_multiplied_digits(number):
+# 	str_number = str(number)
+# 	first = str_number[0]
+# 	first = int(first)
+# 	if len(str_number) <= 1:
+# 		return int(first)
+# 	else:
+# 		return first * get_multiplied_digits(int(str_number[1:]))
+#
+#
+# print(get_multiplied_digits(40203))
 
+def find_max(l):
+	l = list(l)
+	maximum = l[0]
+	for i in l:
+		if i > maximum:
+			maximum = i
+	assert isinstance(maximum, object)
+	return maximum
+print(find_max([1,2,3,4,5,6,7,8,9]))
 
-print(get_multiplied_digits(40203))
+def count_even(l):
+	count = 0
+	for i in l:
+		if i % 2 == 0:
+			count += 1
+	return count
+print(count_even([1,2,3,4,5,6,7,8,9]))
+
+l = [1,2,3,4,5,6,7,8,9]
+def unique(l):
+	unique_list = []
+	for i in l:
+		if i not in unique_list:
+			unique_list.append(i)
+
+	return unique_list
+
+print(unique([1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9]))
+
