@@ -3,3 +3,4 @@ def fake_divide(first, second):
         return "Error, you can't divide by Zero!"
     else:
         return first / second
+
