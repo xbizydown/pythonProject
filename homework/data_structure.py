@@ -67,6 +67,7 @@
 # print(result)
 #
 
+# THIRD VERSION
 
 def get_summ(data):
 
