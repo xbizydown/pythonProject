@@ -19,3 +19,4 @@ def sort_and_print():
     print("Quick sort:", quick_sorted_numbers)
 
 sort_and_print()
+
