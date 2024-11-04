@@ -21,16 +21,18 @@ class House:
         return self.floors
 
     def __str__(self):
-        return str(self.floors)
+        return f"Name: {self.complex_name}, Amount of floors: {self.floors}"
+
+    def __lt__(self, other):
+        return self.floors < other.floors
+
 
 elbrus = House("Elbrus", 30)
 elbrus.complex_info()
 elbrus.go_to(5)
 elbrus.go_to(31)
 
-print("\n\n---------------------------------")
-print("Length amount of floors:", len(elbrus))
-print(str(f"\nString amount of floors: {elbrus}"))
-print("---------------------------------")
+print("Length amount of floors in Elbrus:", len(elbrus))
+print(str(elbrus))
 
 #del elbrus
