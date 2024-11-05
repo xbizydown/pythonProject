@@ -26,13 +26,71 @@ class House:
     def __lt__(self, other):
         return self.floors < other.floors
 
+    def __eq__(self, other):
+        return self.floors == other.floors
 
-elbrus = House("Elbrus", 30)
+    def __gt__(self, other):
+        return self.floors > other.floors
+
+    def __le__(self, other):
+        return self.floors <= other.floors
+
+    def __ge__(self, other):
+        return self.floors >= other.floors
+
+    def __ne__(self, other):
+        return self.floors != other.floors
+
+    def __add__(self, value):
+        if isinstance(value, House):
+            return House(self.complex_name, self.floors + value.floors)
+        elif isinstance(value, int):
+            return House(self.complex_name, self.floors + value)
+        else:
+            raise TypeError("Unsupported type for addition")
+
+    def __radd__(self, value):
+        return self.__add__(value)
+
+    def __iadd__(self, value):
+        if isinstance(value, House):
+            self.floors += value.floors
+        elif isinstance(value, int):
+            self.floors += value
+        else:
+            raise TypeError("Unsupported type for addition")
+        return self
+
+
+elbrus = House("Elbrus", 40)
 elbrus.complex_info()
 elbrus.go_to(5)
-elbrus.go_to(31)
+elbrus.go_to(41)
 
 print("Length amount of floors in Elbrus:", len(elbrus))
 print(str(elbrus))
 
 #del elbrus
+
+moscow_city = House("Moscow City", 50)
+
+print("\n\n\n----------------------------------")
+print(elbrus)
+print(moscow_city)
+
+print("----------------------------------")
+
+print("Before addition",elbrus == moscow_city, "eq")
+elbrus = elbrus + 10
+print(elbrus.floors, "(Elbrus add 10 floors)")
+print("After addition",elbrus == moscow_city, "eq")
+print("----------------------------------")
+elbrus += 10
+print(elbrus.floors, "(Elbrus iadd 10 floors)")
+print("----------------------------------")
+print(elbrus > moscow_city, "gt")
+print(elbrus >= moscow_city, "ge")
+print(elbrus < moscow_city, "lt")
+print(elbrus <= moscow_city, "le")
+print(elbrus != moscow_city, "ne")
+print("----------------------------------")
