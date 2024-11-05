@@ -80,13 +80,15 @@ print(moscow_city)
 
 print("----------------------------------")
 
-print("Before addition",elbrus == moscow_city, "eq")
+print("Before addition:",elbrus == moscow_city, "(eq)")
 elbrus = elbrus + 10
 print(elbrus.floors, "(Elbrus add 10 floors)")
-print("After addition",elbrus == moscow_city, "eq")
+print("After addition:",elbrus == moscow_city, "(eq)")
 print("----------------------------------")
 elbrus += 10
 print(elbrus.floors, "(Elbrus iadd 10 floors)")
+moscow_city = 10 + moscow_city
+print(moscow_city.floors, "(Moscow City radd 10 floors)")
 print("----------------------------------")
 print(elbrus > moscow_city, "gt")
 print(elbrus >= moscow_city, "ge")
